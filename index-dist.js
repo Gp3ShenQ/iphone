@@ -1,0 +1,1 @@
+function getTime(){let t=new Date,e=t.getMonth()+1,n=t.getDate(),i=String(t.getHours()).padStart(2,"0"),a=String(t.getMinutes()).padStart(2,"0");$(".month").text(`${e}月${n}日`),$(".hour").text(`${i}:${a}`)}function updateTime(){setInterval((()=>{getTime()}),6e4)}getTime(),updateTime();

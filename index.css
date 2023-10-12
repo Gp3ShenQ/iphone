@@ -1,0 +1,269 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Young Serif", serif;
+  border: solid 1px;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.timeFont {
+  font-family: "Black Ops One";
+}
+
+.buttonLeftSize {
+  width: 1.4925373134%;
+  height: 8.4615384615%;
+  border-radius: 10px 0 0 10px;
+  background-color: #e8cece;
+}
+
+.buttonRightSize {
+  width: 1.4925373134%;
+  height: 12.6865671642%;
+  border-radius: 0 10px 10px 0;
+  background-color: #e8cece;
+}
+
+.iconKey {
+  width: 50px;
+  height: 50px;
+  padding: 9.5px;
+  border-radius: 100%;
+  margin: 0 10px 0 10px;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
+
+.iconColor {
+  position: relative;
+  font-size: 30px;
+  color: #dddf89;
+  z-index: 2;
+}
+
+.mask {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 0;
+  left: 0;
+  border-radius: 100%;
+  background-color: #dddf89;
+  opacity: 0.3;
+  z-index: 1;
+}
+
+.iconKey1 {
+  width: 25px;
+  height: 25px;
+  padding: 5%;
+  border-radius: 100%;
+  margin: 0 30px 0 10px;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
+
+.iconWhite {
+  position: relative;
+  font-size: 22px;
+  color: #fff;
+  z-index: 2;
+}
+
+.whiteMask {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 0;
+  left: 0;
+  border-radius: 100%;
+  background-color: #5a5a51;
+  opacity: 0.3;
+  z-index: 1;
+}
+
+.indexBox {
+  width: 100vw;
+  height: 100vh;
+  background-color: #947878;
+}
+.indexBox .iphoneOutside {
+  position: absolute;
+  width: 320px;
+  height: 630px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 50px;
+  background-color: #e8cece;
+  -webkit-box-shadow: 10px 10px 30px 10px #544a4a;
+          box-shadow: 10px 10px 30px 10px #544a4a;
+}
+.indexBox .iphoneOutside .soundUp {
+  margin: 47.7611940299% 0 0 -1.4925373134%;
+}
+.indexBox .iphoneOutside .soundDown {
+  margin: 2.9850746269% 0 0 -1.4925373134%;
+}
+.indexBox .iphoneOutside .close {
+  margin: -30.5970149254% 0 0 100.1492537313%;
+}
+.indexBox .iphoneOutside .iphoneBlackSide {
+  position: absolute;
+  width: 94.0298507463%;
+  height: 97.0149253731%;
+  border-radius: 40px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: black;
+}
+.indexBox .iphoneOutside .microphone {
+  position: absolute;
+  width: 55.5555555556%;
+  height: 5.9701492537%;
+  border-radius: 0 0 20px 20px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: black;
+  z-index: 98;
+}
+.indexBox .iphoneOutside .microphone .sound {
+  width: 25.7142857143%;
+  height: 8px;
+  margin: 9% 0 0 38%;
+  background-color: #fff;
+  border-radius: 10px;
+}
+.indexBox .iphoneOutside .microphone .lens {
+  width: 15px;
+  height: 15px;
+  margin: -8% 0 0 70%;
+  border-radius: 10px;
+  background-color: #fff;
+}
+.indexBox .iphoneOutside .iphoneInSide {
+  position: absolute;
+  width: 93.6507936508%;
+  height: 96.9230769231%;
+  border-radius: 35px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.indexBox .iphoneOutside .iphoneInSide .indexNo1 {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  border-radius: 35px;
+  background-image: url("./img/bgImg.jpg");
+}
+.indexBox .iphoneOutside .iphoneInSide .indexNo1 .telecommunications {
+  position: relative;
+  top: 1.5%;
+  left: 3%;
+  font-size: 12px;
+  color: white;
+}
+.indexBox .iphoneOutside .iphoneInSide .indexNo1 .wifi {
+  position: relative;
+  margin: -4% 0 0 83%;
+  color: white;
+}
+.indexBox .iphoneOutside .iphoneInSide .indexNo1 .settingLine {
+  position: relative;
+  width: 14%;
+  height: 0.4%;
+  margin: 3% 0 0 81%;
+  background-color: #9f9393;
+}
+.indexBox .iphoneOutside .iphoneInSide .times {
+  width: 100%;
+  height: 30px;
+  margin-top: 6.9230769231%;
+  font-size: 18;
+  color: white;
+}
+.indexBox .iphoneOutside .iphoneInSide .times .month {
+  text-align: center;
+  color: #dddf89;
+}
+.indexBox .iphoneOutside .iphoneInSide .times .hour {
+  text-align: center;
+  font-size: 60px;
+  color: #dddf89;
+}
+.indexBox .iphoneOutside .iphoneInSide .shortcutKey {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 28%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.indexBox .iphoneOutside .iphoneInSide .shortcutKey .key1:hover, .indexBox .iphoneOutside .iphoneInSide .shortcutKey .key2:hover, .indexBox .iphoneOutside .iphoneInSide .shortcutKey .key3:hover {
+  opacity: 0.8;
+}
+.indexBox .iphoneOutside .iphoneInSide .message {
+  width: 100%;
+  height: 45%;
+}
+.indexBox .iphoneOutside .iphoneInSide .shortcutBottom {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 15px;
+}
+.indexBox .iphoneOutside .iphoneInSide .shortcutBottom .light {
+  position: absolute;
+  left: 12%;
+}
+.indexBox .iphoneOutside .iphoneInSide .shortcutBottom .light:hover .iconWhite, .indexBox .iphoneOutside .iphoneInSide .shortcutBottom .light:hover .whiteMask {
+  width: 60px;
+  height: 60px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  font-size: 28px;
+}
+.indexBox .iphoneOutside .iphoneInSide .shortcutBottom .light:hover .whiteMask {
+  opacity: 0.8;
+}
+.indexBox .iphoneOutside .iphoneInSide .shortcutBottom .cam {
+  position: absolute;
+  right: 10%;
+}
+.indexBox .iphoneOutside .iphoneInSide .shortcutBottom .cam:hover .iconWhite, .indexBox .iphoneOutside .iphoneInSide .shortcutBottom .cam:hover .whiteMask {
+  width: 60px;
+  height: 60px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  font-size: 28px;
+}
+.indexBox .iphoneOutside .iphoneInSide .shortcutBottom .cam:hover .whiteMask {
+  opacity: 0.8;
+}
+.indexBox .iphoneOutside .iphoneInSide .bottomLine {
+  position: absolute;
+  bottom: 1%;
+  border: solid 1px #e1dede;
+  width: 60%;
+  height: 7px;
+  background-color: #e1dede;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border-radius: 10px;
+}

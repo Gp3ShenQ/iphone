@@ -12,15 +12,25 @@ body
 .timeFont
   font-family: 'Black Ops One'
 
-.buttonLeftSize
+.buttonLeftSize  //正面按鈕
   width: calc( 100%/67*1)
   height: calc(100%/13*1.1)
   border-radius: 10px 0 0 10px
   background-color: #e8cece
-  
 .buttonRightSize
   width: calc( 100%/67*1)
   height: calc(100%/134*17)
+  border-radius: 0 10px 10px 0
+  background-color: #e8cece
+
+.backButtonLeftSize //背面按鈕
+  width: calc( 100%/67*1)
+  height: calc(100%/134*17)
+  border-radius: 10px 0 0 10px
+  background-color: #e8cece
+.backButtonRightSize
+  width: calc( 100%/67*1)
+  height: calc(100%/13*1.1)
   border-radius: 0 10px 10px 0
   background-color: #e8cece
 
@@ -76,12 +86,20 @@ body
   opacity: .3
   z-index: 1
 
+@keyframes cube-rotate 
+  0% 
+    transform: rotateY(0)
+  100% 
+    transform: rotateY(360deg)
 
 .indexBox
   width: 100vw
   height: 100vh
-  background-color: #947878
+  // background-color: #947878
+  transform-style: preserve-3d  // 3d
+  animation: cube-rotate 10s infinite ease  //3d  animation
   .iphoneOutside
+    // display: none
     position: absolute
     width: 320px
     height: 630px
@@ -90,7 +108,8 @@ body
     transform: translate(-50% , -50%)
     border-radius: 50px
     background-color: #e8cece
-    box-shadow: 10px 10px 30px 10px #544a4a
+    // box-shadow: 10px 10px 30px 10px #544a4a
+    transform: translateZ(10px)
     .soundUp
       margin: calc(100%/134*64) 0 0 calc(100%/67*-1)
     .soundDown
@@ -225,3 +244,82 @@ body
         left: 50%
         transform: translateX(-50%)
         border-radius: 10px
+
+
+
+  .back   //背面
+    // display: none
+    position: absolute
+    width: 320px
+    height: 630px
+    top: 50%
+    left: 50%
+    transform: translate(-50% , -50%)
+    border-radius: 50px
+    background-color: #e8cece
+    transform: rotateY(180deg) translateZ(10px)
+    .backButton
+      width: 100%
+      height: 100%
+      .soundUp1
+        margin: calc(100%/134*64) 0 0 calc(100%/67*67.1)
+      .soundDown1
+        margin: calc(100%/134*4) 0 0 calc(100%/67*67.1)
+      .close1
+        margin: calc((100%/134*35) - (100%/134*76)) 0 0 calc(100%/67*-1)
+        transform: rotate(180dga)
+      .backInside
+        position: absolute
+        width: calc(100%/63*59)
+        height: calc(100%/130*126)
+        border-radius: 35px
+        top: 50%
+        left: 50%
+        transform: translate(-50% , -50%)
+        background-color: #f5f5f5
+        .backLens
+          position: relative
+          width: calc(100%/63*27)
+          height: calc(100%/134*31)
+          margin: calc(100%/67*2.5) 0 0 calc(100%/67*2.5)
+          border-radius: 30px
+          border: solid 2px #e8cece
+          box-shadow: 1px 1px 10px .2px #b6b1b1
+          .lens1,.lens2
+            width: 60px
+            height: 60px
+            border-radius: 100% 
+            margin: 6px 5px
+            background-color: #e8cece
+            padding: 5px
+            .insideLens
+              position: relative
+              width: 50px
+              height: 50px
+              border-radius: 100%
+              background-color: #4f4949 
+          .bigLight
+            position: absolute
+            right: calc(100%/27*5)
+            top: calc(100%/27*5)
+            width: 16px
+            height: 16px
+            border-radius: 100% 
+            background-color: #9d8b8b
+          .smallLight
+            position: absolute
+            right: calc(100%/27*4)
+            top: calc(100%/27*11)
+            width: calc(100%/27*6)
+            height: calc(100%/30*6)
+            border-radius: 100% 
+            background-color: #cecb0d
+      .picApple
+        position: absolute
+        width: calc(100%/63*15)
+        height: calc(100%/130*15)
+        top: calc(100%/130*54)
+        left: calc(100%/63*24)
+        img 
+          width: 100%
+          height: 100%

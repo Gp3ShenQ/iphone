@@ -5,7 +5,7 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     link(rel="preconnect" href="https://fonts.googleapis.com")
     link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
-    link(href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Caveat:wght@400;500;600;700&family=Jost:ital,wght@0,200;0,700;1,300;1,500&family=Mooli&family=Young+Serif&display=swap" rel="stylesheet")
+    link(href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Caveat:wght@400;500;600;700&family=Jost:ital,wght@0,200;0,700;1,300;1,500&family=Klee+One&family=Lexend:wght@100&family=Ma+Shan+Zheng&family=Mooli&display=swap" rel="stylesheet")
     link(rel="stylesheet", href="./icon/style.css")
     link(href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet")
     script(src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous")
@@ -20,13 +20,27 @@ html(lang="en")
     script(src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js")
   body
     nav.rightBar
-      
+      .topLine
+        .minLine
+      //- .bottomLine
+      .buttonBox
+        .buttonInside
+          .button1.buttonStyle.font 
+            p 新增錯誤
+          .button2.buttonStyle.font 
+            p 旋轉手機
+          .button3.buttonStyle.font 
+            p 更換顏色
+          .button4.buttonStyle.font 
+            p 擴充鍵
+
+
 
     main.indexBox 
       .iphoneOutside
-        .soundUp.buttonLeftSize
-        .soundDown.buttonLeftSize
-        .close.buttonRightSize
+        //- .soundUp.buttonLeftSize
+        //- .soundDown.buttonLeftSize
+        //- .close.buttonRightSize
         .iphoneBlackSide 
           .microphone
             .sound
@@ -54,7 +68,7 @@ html(lang="en")
               .messageBox
                 .title 
                   p 通知中心
-                  span X
+                  span ×
                 .message
                   p 123
               .shortcutBottom
@@ -68,9 +82,6 @@ html(lang="en")
 
       .back 
         .backButton 
-          .soundUp1.backButtonRightSize
-          .soundDown1.backButtonRightSize
-          .close1.backButtonLeftSize
           .backInside
             .backLens
               .lens1
@@ -85,6 +96,13 @@ html(lang="en")
       .left
         .mute1
         .muteBox
-        .soundPlus
-        .soundMinus
+        .soundPlus 
+          p +
+        .soundMinus 
+          p -
+      .right
+        .text
+          p ◎
+      .top 
+      .bottom
         

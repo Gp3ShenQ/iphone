@@ -2,7 +2,6 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: "Young Serif", serif;
-  border: solid 1px;
 }
 
 body {
@@ -101,6 +100,40 @@ body {
   z-index: 1;
 }
 
+.buttonStyle {
+  width: 20%;
+  height: 45%;
+  border-radius: 10px;
+  background-color: #e3e3e3;
+  -webkit-box-shadow: 2px 2px 5px #494949;
+          box-shadow: 2px 2px 5px #494949;
+  text-align: center;
+  line-height: 80px;
+  cursor: pointer;
+}
+
+.buttonStyleIn {
+  width: 20%;
+  height: 45%;
+  border-radius: 10px;
+  background-color: #e3e3e3;
+  text-align: center;
+  line-height: 80px;
+  -webkit-box-shadow: 3px 3px 10px #494949 inset;
+          box-shadow: 3px 3px 10px #494949 inset;
+  cursor: pointer;
+}
+
+.animation {
+  -webkit-animation: cube-rotate 15s infinite ease;
+          animation: cube-rotate 15s infinite ease;
+}
+
+.font {
+  font-family: "Klee One";
+  font-weight: 700;
+}
+
 @-webkit-keyframes cube-rotate {
   0% {
     -webkit-transform: rotateY(0deg);
@@ -164,7 +197,77 @@ body {
   height: 50%;
   right: 0;
 }
-
+.rightBar .topLine {
+  position: relative;
+  width: 20px;
+  height: 200px;
+  margin-left: 50%;
+  background-color: rgb(248, 248, 255);
+  -webkit-box-shadow: 5px 0 20px 1px rgba(0, 0, 0, 0.8);
+          box-shadow: 5px 0 20px 1px rgba(0, 0, 0, 0.8);
+}
+.rightBar .topLine::after {
+  content: "";
+  display: block;
+  width: 20%;
+  height: 100%;
+  margin-left: 20%;
+  background-color: #dfcfcf;
+  -webkit-box-shadow: 2px 0 10px #948484;
+          box-shadow: 2px 0 10px #948484;
+}
+.rightBar .minLine {
+  position: absolute;
+  width: 30px;
+  height: 40px;
+  top: 90%;
+  left: -18%;
+  background-color: rgb(248, 248, 255);
+  -webkit-box-shadow: 5px 0 20px 1px rgba(0, 0, 0, 0.8);
+          box-shadow: 5px 0 20px 1px rgba(0, 0, 0, 0.8);
+}
+.rightBar .minLine::after {
+  content: "";
+  display: block;
+  width: 20%;
+  height: 100%;
+  margin-left: 20%;
+  background-color: #dfcfcf;
+  -webkit-box-shadow: 2px 0 10px #948484;
+          box-shadow: 2px 0 10px #948484;
+}
+.rightBar .buttonBox {
+  width: 90%;
+  height: 40%;
+  margin-left: 5%;
+  margin-top: 20px;
+  border-radius: 20px;
+  background-color: rgb(248, 248, 255);
+  -webkit-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.8);
+          box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.8);
+}
+.rightBar .buttonBox .buttonInside {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.rightBar .buttonBox .buttonInside .button1 {
+  display: block;
+}
+.rightBar .buttonBox .buttonInside .button1 p {
+  text-align: center;
+}
 .indexBox {
   position: absolute;
   width: 50%;
@@ -176,22 +279,13 @@ body {
 .indexBox .iphoneOutside {
   position: absolute;
   top: 50px;
-  left: 78px;
+  left: 240px;
   width: 320px;
   height: 630px;
   border-radius: 50px;
   background-color: #e8cece;
   -webkit-transform: translateZ(10px);
           transform: translateZ(10px);
-}
-.indexBox .iphoneOutside .soundUp {
-  margin: 47.7611940299% 0 0 -1.4925373134%;
-}
-.indexBox .iphoneOutside .soundDown {
-  margin: 2.9850746269% 0 0 -1.4925373134%;
-}
-.indexBox .iphoneOutside .close {
-  margin: -30.5970149254% 0 0 100.1492537313%;
 }
 .indexBox .iphoneOutside .iphoneBlackSide {
   width: 94.0298507463%;
@@ -301,7 +395,8 @@ body {
   height: 50%;
 }
 .indexBox .iphoneOutside .iphoneInSide .messageBox .title {
-  margin: 70% 0 0 5%;
+  padding-top: 70%;
+  margin: 0 0 0 5%;
   height: 10%;
   width: 90%;
   display: -webkit-box;
@@ -352,9 +447,9 @@ body {
   height: 100%;
   border-radius: 10px;
   opacity: 0.8;
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
   background-color: #675b5b;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
 }
 .indexBox .iphoneOutside .iphoneInSide .shortcutBottom {
   width: 100%;
@@ -405,7 +500,7 @@ body {
 .indexBox .back {
   position: absolute;
   top: 50px;
-  left: 78px;
+  left: 240px;
   width: 320px;
   height: 630px;
   border-radius: 50px;
@@ -416,17 +511,6 @@ body {
 .indexBox .back .backButton {
   width: 100%;
   height: 100%;
-}
-.indexBox .back .backButton .soundUp1 {
-  margin: 47.7611940299% 0 0 100.1492537313%;
-}
-.indexBox .back .backButton .soundDown1 {
-  margin: 2.9850746269% 0 0 100.1492537313%;
-}
-.indexBox .back .backButton .close1 {
-  margin: -30.5970149254% 0 0 -1.4925373134%;
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
 }
 .indexBox .back .backButton .backInside {
   width: 93.6507936508%;
@@ -496,7 +580,7 @@ body {
 .indexBox .left {
   position: absolute;
   top: 83px;
-  left: 71px;
+  left: 233px;
   width: 20px;
   height: 564.1791044776px;
   background-color: #e8cece;
@@ -528,8 +612,6 @@ body {
           transform: rotateX(-30deg) translateZ(-5px) translateY(2px);
 }
 .indexBox .left .mute1 {
-  content: "";
-  display: block;
   position: absolute;
   width: 20%;
   height: 4%;
@@ -545,11 +627,225 @@ body {
   -webkit-transform: translateZ(2px);
           transform: translateZ(2px);
 }
-.indexBox .muteBox {
+.indexBox .left .muteBox {
   width: 40%;
   height: 4.2307692308%;
   background-color: #000;
   margin: 300% 0 0 30%;
   border-radius: 5px;
   background-color: #7f0000;
+}
+.indexBox .left .soundPlus {
+  position: relative;
+  margin: 38px 6px 0 6px;
+  width: 8px;
+  height: 50px;
+  border-radius: 50px;
+  -webkit-box-shadow: 0px 0px 4px #494949;
+          box-shadow: 0px 0px 4px #494949;
+  background-color: #e8cece;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translateZ(8px);
+          transform: translateZ(8px);
+}
+.indexBox .left .soundPlus p {
+  position: absolute;
+  font-size: 12px;
+  left: 8%;
+  top: 10%;
+  font-weight: 700;
+}
+.indexBox .left .soundPlus::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 108%;
+  height: 90%;
+  left: 100%;
+  top: 0;
+  background-color: #e8cece;
+  -webkit-box-shadow: 1px 1px 4px #494949 inset;
+          box-shadow: 1px 1px 4px #494949 inset;
+  -webkit-transform: rotateX(0deg) rotateY(90deg) translateX(5px) translateZ(-4px) translateY(2px);
+          transform: rotateX(0deg) rotateY(90deg) translateX(5px) translateZ(-4px) translateY(2px);
+}
+.indexBox .left .soundPlus::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 108%;
+  height: 90%;
+  left: 100%;
+  top: 0;
+  background-color: #e8cece;
+  -webkit-box-shadow: 1px 1px 4px #494949 inset;
+          box-shadow: 1px 1px 4px #494949 inset;
+  -webkit-transform: rotateX(0deg) rotateY(90deg) translateX(4px) translateZ(-13px) translateY(2px);
+          transform: rotateX(0deg) rotateY(90deg) translateX(4px) translateZ(-13px) translateY(2px);
+}
+.indexBox .left .soundMinus {
+  position: relative;
+  margin: 12px 6px;
+  width: 8px;
+  height: 50px;
+  border-radius: 50px;
+  -webkit-box-shadow: 0px 0px 4px #494949;
+          box-shadow: 0px 0px 4px #494949;
+  background-color: #e8cece;
+  -webkit-transform: translateZ(8px);
+          transform: translateZ(8px);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+.indexBox .left .soundMinus p {
+  position: absolute;
+  left: 10%;
+  font-size: 16px;
+  margin-top: 15px;
+}
+.indexBox .left .soundMinus::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 108%;
+  height: 90%;
+  left: 100%;
+  top: 0;
+  background-color: #e8cece;
+  -webkit-box-shadow: 1px 1px 4px #494949 inset;
+          box-shadow: 1px 1px 4px #494949 inset;
+  -webkit-transform: rotateX(0deg) rotateY(90deg) translateX(5px) translateZ(-4px) translateY(2px);
+          transform: rotateX(0deg) rotateY(90deg) translateX(5px) translateZ(-4px) translateY(2px);
+}
+.indexBox .left .soundMinus::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 108%;
+  height: 90%;
+  left: 100%;
+  top: 0;
+  background-color: #e8cece;
+  -webkit-box-shadow: 1px 1px 4px #494949 inset;
+          box-shadow: 1px 1px 4px #494949 inset;
+  -webkit-transform: rotateX(0deg) rotateY(90deg) translateX(4px) translateZ(-13px) translateY(2px);
+          transform: rotateX(0deg) rotateY(90deg) translateX(4px) translateZ(-13px) translateY(2px);
+}
+.indexBox .right {
+  position: absolute;
+  top: 83px;
+  left: 547px;
+  width: 20px;
+  height: 564.1791044776px;
+  background-color: #e8cece;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: rotateY(90deg);
+          transform: rotateY(90deg);
+}
+.indexBox .right::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 3.7313432836%;
+  background-color: #e8cece;
+  top: -20px;
+  -webkit-transform: rotateX(30deg) translateZ(-5px) translateY(-2px);
+          transform: rotateX(30deg) translateZ(-5px) translateY(-2px);
+}
+.indexBox .right::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 3.7313432836%;
+  background-color: #e8cece;
+  top: 563px;
+  -webkit-transform: rotateX(-30deg) translateZ(-5px) translateY(2px);
+          transform: rotateX(-30deg) translateZ(-5px) translateY(2px);
+}
+.indexBox .right .text {
+  position: relative;
+  margin: 130px 6px;
+  width: 8px;
+  height: 80px;
+  border-radius: 50px;
+  -webkit-box-shadow: 0px 0px 4px #494949;
+          box-shadow: 0px 0px 4px #494949;
+  background-color: #e8cece;
+  -webkit-transform: translateZ(8px);
+          transform: translateZ(8px);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+.indexBox .right .text p {
+  position: absolute;
+  text-align: center;
+  font-size: 12px;
+  top: 25%;
+  left: -1px;
+}
+.indexBox .right .text::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 108%;
+  height: 90%;
+  left: 100%;
+  top: 0;
+  background-color: #e8cece;
+  -webkit-box-shadow: 1px 1px 4px #494949 inset;
+          box-shadow: 1px 1px 4px #494949 inset;
+  -webkit-transform: rotateX(0deg) rotateY(90deg) translateX(5px) translateZ(-4px) translateY(2px);
+          transform: rotateX(0deg) rotateY(90deg) translateX(5px) translateZ(-4px) translateY(2px);
+}
+.indexBox .right .text::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 108%;
+  height: 90%;
+  left: 100%;
+  top: 0;
+  background-color: #e8cece;
+  -webkit-box-shadow: 1px 1px 4px #494949 inset;
+          box-shadow: 1px 1px 4px #494949 inset;
+  -webkit-transform: rotateX(0deg) rotateY(90deg) translateX(4px) translateZ(-13px) translateY(2px);
+          transform: rotateX(0deg) rotateY(90deg) translateX(4px) translateZ(-13px) translateY(2px);
+}
+.indexBox .top {
+  position: absolute;
+  top: -105px;
+  left: 240px;
+  width: 20px;
+  height: 320px;
+  background-color: #000;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: rotateY(90deg) rotateX(90deg);
+          transform: rotateY(90deg) rotateX(90deg);
+}
+.indexBox .top::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 3.7313432836%;
+  background-color: #e8cece;
+  top: 180px;
+  -webkit-transform: rotateX(30deg) translateZ(-7px) translateY(6.5px);
+          transform: rotateX(30deg) translateZ(-7px) translateY(6.5px);
+}
+.indexBox .top::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 3.7313432836%;
+  background-color: #e8cece;
+  top: 440px;
+  -webkit-transform: rotateX(-30deg) translateZ(-3px) translateY(0.5px);
+          transform: rotateX(-30deg) translateZ(-3px) translateY(0.5px);
 }

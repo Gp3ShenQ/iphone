@@ -15,6 +15,37 @@ function updateTime(){
   },1000*60)
   
 }
-
 getTime()
 updateTime()
+
+$(".button1").on("click",function(){
+  $(".button1").removeClass("buttonStyle")
+  $(".button1").addClass("buttonStyleIn")
+  $(".button2,.button3,.button4").removeClass("buttonStyleIn")
+  $(".button2,.button3,.button4").addClass("buttonStyle")
+  $(".indexBox").removeClass("animation")
+})
+$(".button2").on("click",function(){
+  $(".indexBox").addClass("animation")
+  $(".button2").removeClass("buttonStyle")
+  $(".button2").addClass("buttonStyleIn")
+  $(".button1,.button3,.button4").removeClass("buttonStyleIn")
+  $(".button1,.button3,.button4").addClass("buttonStyle")
+})
+
+
+$(".button3").on("click",function(){
+  $(".button3").removeClass("buttonStyle")
+  $(".button3").addClass("buttonStyleIn")
+  $(".button2,.button1,.button4").removeClass("buttonStyleIn")
+  $(".button2,.button1,.button4").addClass("buttonStyle")
+  $(".indexBox").removeClass("animation")
+})
+$(".button4").on("click",function(){
+  $(".button4").removeClass("buttonStyle")
+  $(".button4").addClass("buttonStyleIn")
+  $(".button2,.button3,.button1").removeClass("buttonStyleIn")
+  $(".button2,.button3,.button1").addClass("buttonStyle")
+  $(".indexBox").removeClass("animation")
+})
+

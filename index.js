@@ -26,9 +26,12 @@ $(".button1").on("click",function(){
   $(".indexBox").removeClass("animation")
 })
 $(".button2").on("click",function(){
+  $(".button2").toggleClass("buttonStyleIn")
+  if ($(".indexBox").hasClass("animation")){
+    $(".indexBox").removeClass("animation")
+    return
+  }
   $(".indexBox").addClass("animation")
-  $(".button2").removeClass("buttonStyle")
-  $(".button2").addClass("buttonStyleIn")
   $(".button1,.button3,.button4").removeClass("buttonStyleIn")
   $(".button1,.button3,.button4").addClass("buttonStyle")
 })

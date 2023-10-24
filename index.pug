@@ -22,25 +22,34 @@ html(lang="en")
     nav.rightBar
       .topLine
         .minLine
-      //- .bottomLine
       .buttonBox
         .buttonInside
-          .button1.buttonStyle.font 
-            p 新增錯誤
+          .button1.buttonStyle.font
+            p 錯誤訊息
           .button2.buttonStyle.font 
             p 旋轉手機
           .button3.buttonStyle.font 
             p 更換顏色
           .button4.buttonStyle.font 
             p 擴充鍵
+      .mes-area 
+        .mes-top 
+          .add-button
+            p 系統訊息
+        .mes-bottom 
+          .mes-box
+            .mes-title 標題
+              input
+            .mes-text 項目
+              input
+          .output 
+            button 送出
+
 
 
 
     main.indexBox 
       .iphoneOutside
-        //- .soundUp.buttonLeftSize
-        //- .soundDown.buttonLeftSize
-        //- .close.buttonRightSize
         .iphoneBlackSide 
           .microphone
             .sound
@@ -70,7 +79,10 @@ html(lang="en")
                   p 通知中心
                   span ×
                 .message
-                  p 123
+                  p.title 123
+                  p.inner-text
+                .message
+                  p 145
               .shortcutBottom
                 .light.iconKey1
                   .icon-facebook21.iconWhite

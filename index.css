@@ -108,9 +108,16 @@ body {
   background-color: #e3e3e3;
   -webkit-box-shadow: 2px 2px 5px #494949;
           box-shadow: 2px 2px 5px #494949;
-  text-align: center;
-  line-height: 40px;
+  margin: auto auto;
   cursor: pointer;
+}
+.buttonStyle p {
+  text-align: center;
+  line-height: 4;
+}
+.buttonStyle.press {
+  -webkit-box-shadow: 3px 3px 10px #494949 inset;
+          box-shadow: 3px 3px 10px #494949 inset;
 }
 
 .buttonStyleIn {
@@ -134,6 +141,16 @@ body {
 .font {
   font-family: "Klee One";
   font-weight: 700;
+}
+
+.closeAnimation {
+  -webkit-animation: closewidth 1s both, closeheight 0.5s both 0.8s;
+          animation: closewidth 1s both, closeheight 0.5s both 0.8s;
+}
+
+.openAnimation {
+  -webkit-animation: openheight 0.5s both, openwidth 1s both 0.3s;
+          animation: openheight 0.5s both, openwidth 1s both 0.3s;
 }
 
 @-webkit-keyframes cube-rotate {
@@ -191,6 +208,82 @@ body {
   100% {
     -webkit-transform: rotateY(0deg);
             transform: rotateY(0deg);
+  }
+}
+@-webkit-keyframes closewidth {
+  0% {
+    width: 50%;
+    height: 70%;
+  }
+  100% {
+    width: 1%;
+  }
+}
+@keyframes closewidth {
+  0% {
+    width: 50%;
+    height: 70%;
+  }
+  100% {
+    width: 1%;
+  }
+}
+@-webkit-keyframes closeheight {
+  0% {
+    margin-top: 50px;
+    height: 70%;
+  }
+  100% {
+    margin-top: -100px;
+    height: 1%;
+  }
+}
+@keyframes closeheight {
+  0% {
+    margin-top: 50px;
+    height: 70%;
+  }
+  100% {
+    margin-top: -100px;
+    height: 1%;
+  }
+}
+@-webkit-keyframes openwidth {
+  0% {
+    width: 1%;
+  }
+  100% {
+    width: 50%;
+    height: 70%;
+  }
+}
+@keyframes openwidth {
+  0% {
+    width: 1%;
+  }
+  100% {
+    width: 50%;
+    height: 70%;
+  }
+}
+@-webkit-keyframes openheight {
+  0% {
+    margin-top: -100px;
+    height: 1%;
+  }
+  100% {
+    margin-top: 50px;
+    height: 70%;
+  }
+}
+@keyframes openheight {
+  0% {
+    margin-top: -100px;
+    height: 1%;
+  }
+  100% {
+    margin-top: 50px;
+    height: 70%;
   }
 }
 .rightBar {
@@ -266,6 +359,50 @@ body {
 .rightBar .buttonBox .buttonInside .button1 p {
   text-align: center;
 }
+.rightBar .buttonBox .buttonInside .buttonStyle:not(.button2):active {
+  -webkit-box-shadow: 3px 3px 10px #494949 inset;
+          box-shadow: 3px 3px 10px #494949 inset;
+}
+.rightBar .mes-area {
+  width: 1%;
+  height: 1%;
+  margin: -100px 130px;
+  border-radius: 20px;
+  background-color: rgb(248, 248, 255);
+  overflow: hidden;
+}
+.rightBar .mes-area .mes-top {
+  padding: 20px 0 0 50px;
+}
+.rightBar .mes-area .add-button {
+  display: inline-block;
+  border: dashed 2px #948484;
+  border-radius: 10px;
+}
+.rightBar .mes-area .add-button p {
+  margin: 10px 20px;
+}
+.rightBar .mes-area .mes-bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.rightBar .mes-area .mes-box {
+  width: 70%;
+}
+.rightBar .mes-area .mes-title, .rightBar .mes-area .mes-text {
+  margin: 30px 10px 10px 40px;
+}
+.rightBar .mes-area .mes-title:nth-child(1) input, .rightBar .mes-area .mes-text:nth-child(1) input {
+  width: 100%;
+}
+.rightBar .mes-area .mes-title:nth-child(2) input, .rightBar .mes-area .mes-text:nth-child(2) input {
+  width: 100%;
+}
+.rightBar .mes-area .output button {
+  margin: 100px 0 0 0;
+}
+
 .indexBox {
   position: absolute;
   width: 50%;
@@ -339,6 +476,7 @@ body {
   left: 0;
   border-radius: 35px;
   background-image: url("./img/bgImg.jpg");
+  overflow: hidden;
 }
 .indexBox .iphoneOutside .iphoneInSide .indexNo1 .telecommunications {
   position: relative;
@@ -389,12 +527,12 @@ body {
   opacity: 0.8;
 }
 .indexBox .iphoneOutside .iphoneInSide .messageBox {
-  width: 100%;
+  width: 107%;
   height: 50%;
+  overflow-y: scroll;
 }
 .indexBox .iphoneOutside .iphoneInSide .messageBox .title {
-  padding-top: 70%;
-  margin: 0 0 0 5%;
+  margin: 0 0 20px 5%;
   height: 10%;
   width: 90%;
   display: -webkit-box;
@@ -425,10 +563,11 @@ body {
 .indexBox .iphoneOutside .iphoneInSide .messageBox .message {
   position: relative;
   width: 90%;
-  height: 20%;
-  margin: 3% 5%;
+  height: 25%;
+  margin: 2px auto;
   border-radius: 10px;
   color: white;
+  padding: 5px;
 }
 .indexBox .iphoneOutside .iphoneInSide .messageBox .message p {
   position: relative;
@@ -592,22 +731,22 @@ body {
   display: block;
   position: absolute;
   width: 100%;
-  height: 3.7313432836%;
+  height: 7.4626865672%;
   background-color: #e8cece;
   top: -20px;
-  -webkit-transform: rotateX(30deg) translateZ(-5px) translateY(-2px);
-          transform: rotateX(30deg) translateZ(-5px) translateY(-2px);
+  -webkit-transform: rotateX(45deg) translateZ(-2px) translateY(-15px);
+          transform: rotateX(45deg) translateZ(-2px) translateY(-15px);
 }
 .indexBox .left::before {
   content: "";
   display: block;
   position: absolute;
   width: 100%;
-  height: 3.7313432836%;
+  height: 8.9552238806%;
   background-color: #e8cece;
   top: 563px;
-  -webkit-transform: rotateX(-30deg) translateZ(-5px) translateY(2px);
-          transform: rotateX(-30deg) translateZ(-5px) translateY(2px);
+  -webkit-transform: rotateX(-45deg) translateZ(-19px) translateY(2px);
+          transform: rotateX(-45deg) translateZ(-19px) translateY(2px);
 }
 .indexBox .left .mute1 {
   position: absolute;
@@ -747,22 +886,22 @@ body {
   display: block;
   position: absolute;
   width: 100%;
-  height: 3.7313432836%;
+  height: 7.4626865672%;
   background-color: #e8cece;
   top: -20px;
-  -webkit-transform: rotateX(30deg) translateZ(-5px) translateY(-2px);
-          transform: rotateX(30deg) translateZ(-5px) translateY(-2px);
+  -webkit-transform: rotateX(45deg) translateZ(0px) translateY(-20px);
+          transform: rotateX(45deg) translateZ(0px) translateY(-20px);
 }
 .indexBox .right::before {
   content: "";
   display: block;
   position: absolute;
   width: 100%;
-  height: 3.7313432836%;
+  height: 7.4626865672%;
   background-color: #e8cece;
   top: 563px;
-  -webkit-transform: rotateX(-30deg) translateZ(-5px) translateY(2px);
-          transform: rotateX(-30deg) translateZ(-5px) translateY(2px);
+  -webkit-transform: rotateX(-45deg) translateZ(-15px) translateY(8px);
+          transform: rotateX(-45deg) translateZ(-15px) translateY(8px);
 }
 .indexBox .right .text {
   position: relative;

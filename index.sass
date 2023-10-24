@@ -102,9 +102,16 @@ body
   border-radius: 10px
   background-color: #e3e3e3
   box-shadow: 2px 2px 5px #494949
-  text-align: center
-  line-height: 40px
+  // text-align: center
+  // line-height: 40px
+  margin: auto auto
   cursor: pointer
+  p
+    text-align: center
+    line-height: 4
+  &.press
+    box-shadow: 3px 3px 10px #494949 inset      
+
 
 .buttonStyleIn
   width: 20%
@@ -148,7 +155,10 @@ body
   box-shadow: 1px 1px 4px #494949 inset
   transform: rotateX(0deg) rotateY(90deg) translateX(4px) translateZ(-13px) translateY(2px)
   
-  
+.closeAnimation
+  animation: closewidth 1s both ,closeheight .5s both .8s
+.openAnimation
+  animation: openheight .5s both ,openwidth 1s both .3s
 
 @keyframes cube-rotate 
   0% 
@@ -166,6 +176,34 @@ body
   100% 
     transform: rotateY(0deg)
 
+@keyframes closewidth
+  0% 
+    width: 50%
+    height: 70%
+  100%
+    width: 1%
+@keyframes closeheight
+  0% 
+    margin-top: 50px
+    height: 70%
+  100%
+    margin-top: -100px
+    height: 1%
+
+@keyframes openwidth
+  0% 
+    width: 1%
+  100%
+    width: 50%
+    height: 70%
+@keyframes openheight
+  0% 
+    margin-top: -100px
+    height: 1%
+  100%
+    margin-top: 50px
+    height: 70%
+
 .rightBar
   position: absolute
   width: 50%  
@@ -176,7 +214,6 @@ body
     width: 20px
     height: 200px
     margin-left: 50%  
-
     background-color: rgba(248,248,255)
     box-shadow: 5px 0 20px 1px  rgba(0, 0, 0, 0.8)
     &::after
@@ -193,7 +230,6 @@ body
     height: 40px
     top: 90%
     left: -18%
-    // margin: 50px  
     background-color: rgba(248,248,255)
     box-shadow: 5px 0 20px 1px  rgba(0, 0, 0, 0.8)
     &::after
@@ -205,7 +241,6 @@ body
       background-color: #dfcfcf
       box-shadow: 2px 0 10px  #948484
   .buttonBox
-    
     width: 90%
     height: 40%
     margin-left: 5%
@@ -218,35 +253,53 @@ body
       display: flex
       margin-top: 20px
       justify-content: space-around
-      // align-items: center
       width: 100%
       height: 100%
       user-select: none
       .button1
         p
           text-align: center
-      .button2
-      .button3
-      .button4
-
-
-
-
-
-
-
-
-
-
+      .buttonStyle:not(.button2)
+        &:active
+          box-shadow: 3px 3px 10px #494949 inset
+  .mes-area 
+    width: 1%
+    height: 1% 
+    margin: -100px 130px
+    border-radius: 20px
+    background-color: rgba(248,248,255)
+    // animation: closewidth 1s both ,closeheight .5s both .8s 
+    overflow: hidden
+    .mes-top 
+      padding: 20px 0 0 50px
+    .add-button
+      display: inline-block
+      border: dashed 2px #948484
+      border-radius: 10px
+      p
+        margin: 10px 20px
+    .mes-bottom 
+      display: flex
+    .mes-box
+      width: 70%
+    .mes-title,.mes-text
+      margin: 30px 10px 10px 40px 
+      &:nth-child(1)
+        input
+          width: 100%
+      &:nth-child(2)
+        input
+          width: 100%
+    .output 
+      button 
+        margin: 100px 0 0 0
 
 .indexBox
   position: absolute
   width: 50%  
   height: 100%  
   left: 0
-  // background-color: #947878
   transform-style: preserve-3d  // 3d
-  // animation: cube-rotate 15s infinite ease  //3d  animation
   .iphoneOutside
     // display: none
     position: absolute
@@ -300,6 +353,7 @@ body
         left: 0
         border-radius: 35px
         background-image: url("./img/bgImg.jpg")
+        overflow: hidden
         .telecommunications
           position: relative
           top: 1.5%
@@ -339,15 +393,14 @@ body
           &:hover
             opacity: .8
       .messageBox
-        width: 100%
+        width: 107%
         height: 50%
+        overflow-y: scroll
         .title
-          padding-top: 70%
-          margin: 0 0 0 5%
+          margin: 0 0 20px 5%
           height: 10%
           width: 90%
           display: flex
-
           align-items: center
           justify-content: space-between
           p
@@ -367,10 +420,11 @@ body
         .message
           position: relative
           width: 90%
-          height: 20%
-          margin: 3% 5%
+          height: 25%
+          margin: 2px auto
           border-radius: 10px
           color: white
+          padding: 5px
           p
             position: relative
             font-size: 16px
@@ -508,19 +562,19 @@ body
       display: block
       position: absolute
       width: 100% 
-      height: calc(100%/134*5)
+      height: calc(100%/134*10)
       background-color: #e8cece
       top: -20px
-      transform: rotateX(30deg) translateZ(-5px) translateY(-2px)
+      transform: rotateX(45deg) translateZ(-2px) translateY(-15px)
     &::before
       content: ""
       display: block
       position: absolute
       width: 100% 
-      height: calc(100%/134*5)
+      height: calc(100%/134*12)
       background-color: #e8cece
       top: 563px
-      transform: rotateX(-30deg) translateZ(-5px) translateY(2px)
+      transform: rotateX(-45deg) translateZ(-19px) translateY(2px)
     .mute1
       position: absolute
       width: 20%
@@ -598,19 +652,19 @@ body
       display: block
       position: absolute
       width: 100% 
-      height: calc(100%/134*5)
+      height: calc(100%/134*10)
       background-color: #e8cece
       top: -20px
-      transform: rotateX(30deg) translateZ(-5px) translateY(-2px)
+      transform: rotateX(45deg) translateZ(0px) translateY(-20px)
     &::before
       content: ""
       display: block
       position: absolute
       width: 100% 
-      height: calc(100%/134*5)
+      height: calc(100%/134*10)
       background-color: #e8cece
       top: 563px
-      transform: rotateX(-30deg) translateZ(-5px) translateY(2px)
+      transform: rotateX(-45deg) translateZ(-15px) translateY(8px)
     .text
       position: relative
       margin: 130px 6px

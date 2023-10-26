@@ -45,7 +45,7 @@ const messageControl = {
     console.log('submit')
     const title = $('.mes-title input').val();
     const text = $('.mes-text input').val();
-    $('.messageBox').append(this.template.replace('{{title}}',title).replace('{{text}}',text))
+    $('.message-area').append(this.template.replace('{{title}}',title).replace('{{text}}',text))
     $('.mes-title input').val('')
     $('.mes-text input').val('')
   },
@@ -59,6 +59,10 @@ const messageControl = {
     this.submitEvent()
   }
 }
-
 messageControl.init()
 
+$('.clear').on("click",function(){
+  $('.message-area').html('')
+  if ('.message-area')html() == ('')
+    ('.clear').css("display", "none")
+})

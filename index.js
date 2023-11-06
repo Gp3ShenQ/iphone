@@ -36,13 +36,26 @@ $(".button1").on("click",function(){
   $(".mes-area").addClass("openAnimation")
   })
 
+$(".button3").on("click",function(){
+  $(this).toggleClass("press")
+  if (!$(this).hasClass("press")){
+    $(".color-area").css("left","100%")
+    return
+  }
+  $(".color-area").css("left","40%")
+})
+$(".color").on("click",function(){
+  const theme = $(this).attr('theme-option');
+  $('.indexBox').attr('theme',theme)
+})
+
+
 const messageControl = {
   template: `<div class="message">
     <p class="title">{{title}}</p>
     <p class="inner-text">{{text}}</p>
   </div>`,
   addMessage(){
-    console.log('submit')
     const title = $('.mes-title input').val();
     const text = $('.mes-text input').val();
     $('.message-area').append(this.template.replace('{{title}}',title).replace('{{text}}',text))
@@ -63,6 +76,5 @@ messageControl.init()
 
 $('.clear').on("click",function(){
   $('.message-area').html('')
-  if ('.message-area')html() == ('')
-    ('.clear').css("display", "none")
 })
+

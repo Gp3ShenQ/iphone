@@ -16,10 +16,90 @@ body
   top: 50%
   left: 50%
   transform: translate(-50% , -50%)
-  
+
+.indexBox
+  &[theme="style1"]
+    .iphoneOutside
+      background-color: #E0E5DF
+    .back
+      background-color: #E0E5DF
+      .backButton 
+        .backInside
+          background-color: #97A48D
+    .left,.right,.top
+      background-color: #97A48D
+      &::after,&::before
+        background-color: #97A48D
+    .left
+      .soundPlus,.soundMinus
+        background-color: #97A48D
+    .right
+      .text
+        background-color: #97A48D
+
+  &[theme="style2"]
+    .iphoneOutside
+      background-color: #9DA6B7
+    .back
+      background-color: #9DA6B7
+      .backButton 
+        .backInside
+          background-color: #C1CADA
+    .left,.right,.top
+      background-color: #C1CADA
+      &::after,&::before
+        background-color: #C1CADA
+    .left
+      .soundPlus,.soundMinus
+        background-color: #C1CADA
+    .right
+      .text
+        background-color: #C1CADA
+
+  &[theme="style3"]
+    .iphoneOutside
+      background-color: #c59c83
+    .back
+      background-color: #c59c83
+      .backButton 
+        .backInside
+          background-color: #D4BFBA
+    .left,.right,.top
+      background-color: #D4BFBA
+      &::after,&::before
+        background-color: #D4BFBA
+    .left
+      .soundPlus,.soundMinus
+        background-color: #D4BFBA
+    .right
+      .text
+        background-color: #D4BFBA
+
+  &[theme="style4"]
+    .iphoneOutside
+      background-color: #AB545A
+    .back
+      background-color: #AB545A
+      .backButton 
+        .backInside
+          background-color: #B57C82
+    .left,.right,.top
+      background-color: #B57C82
+      &::after,&::before
+        background-color: #B57C82
+    .left
+      .soundPlus,.soundMinus
+        background-color: #B57C82
+    .right
+      .text
+        background-color: #B57C82
+
+.colorhidden
+  left: 40%
 
 .timeFont
   font-family: 'Black Ops One'
+
 
 .buttonLeftSize  //正面按鈕
   width: calc( 100%/67*1)
@@ -102,8 +182,6 @@ body
   border-radius: 10px
   background-color: #e3e3e3
   box-shadow: 2px 2px 5px #494949
-  // text-align: center
-  // line-height: 40px
   margin: auto auto
   cursor: pointer
   p
@@ -139,7 +217,7 @@ body
   height: 90%
   left: 100%
   top: 0
-  background-color: #e8cece
+  background-color: white
   box-shadow: 1px 1px 4px #494949 inset
   transform: rotateX(0deg) rotateY(90deg) translateX(5px) translateZ(-4px) translateY(2px)
 
@@ -151,14 +229,14 @@ body
   height: 90%
   left: 100%
   top: 0
-  background-color: #e8cece
+  background-color: white
   box-shadow: 1px 1px 4px #494949 inset
   transform: rotateX(0deg) rotateY(90deg) translateX(4px) translateZ(-13px) translateY(2px)
   
 .closeAnimation
-  animation: closewidth 1s both ,closeheight .5s both .8s
+  animation: closewidth .2s both ,closeheight .3s both .2s
 .openAnimation
-  animation: openheight .5s both ,openwidth 1s both .3s
+  animation: openheight .2s both ,openwidth .3s both .2s
 
 @keyframes cube-rotate 
   0% 
@@ -179,13 +257,13 @@ body
 @keyframes closewidth
   0% 
     width: 50%
-    height: 70%
+    height: 30%
   100%
     width: 1%
 @keyframes closeheight
   0% 
     margin-top: 50px
-    height: 70%
+    height: 30%
   100%
     margin-top: -100px
     height: 1%
@@ -195,20 +273,21 @@ body
     width: 1%
   100%
     width: 50%
-    height: 70%
+    height: 30%
 @keyframes openheight
   0% 
     margin-top: -100px
     height: 1%
   100%
     margin-top: 50px
-    height: 70%
+    height: 30%
 
 .rightBar
   position: absolute
   width: 50%  
-  height: 50%
+  height: 100%
   right: 0
+  overflow: hidden
   .topLine
     position: relative
     width: 20px
@@ -242,7 +321,7 @@ body
       box-shadow: 2px 0 10px  #948484
   .buttonBox
     width: 90%
-    height: 40%
+    height: 20%
     margin-left: 5%
     margin-top: 20px
     border-radius: 20px
@@ -251,7 +330,6 @@ body
     .buttonInside
       border: solid 1px
       display: flex
-      margin-top: 20px
       justify-content: space-around
       width: 100%
       height: 100%
@@ -294,6 +372,39 @@ body
       button 
         margin: 100px 0 0 0
 
+  .color-area 
+    position: absolute
+    top: 45%
+    left: 100%
+    width: 40%
+    height: 10%
+    border-radius: 20px
+    background-color: rgba(248,248,255)
+    transition-duration: .5s 
+  .color-box
+    display: flex
+    width: 100%
+    height: 100%
+    border-radius: 20px
+    align-items: center
+    justify-content: space-between
+    .color
+      width: 18%
+      height: 80%
+      border-radius: 20px
+      box-shadow: 2px 2px 5px 0 
+      cursor: pointer
+      &:nth-child(1)
+        background-color: #97A48D
+      &:nth-child(2)
+        background-color: #C1CADA
+      &:nth-child(3)
+        background-color: #D4BFBA
+      &:nth-child(4)
+        background-color: #B57C82
+      
+
+
 .indexBox
   position: absolute
   width: 50%  
@@ -308,7 +419,7 @@ body
     width: 320px
     height: 630px
     border-radius: 50px
-    background-color: #e8cece
+    background-color: white
     transform: translateZ(10px)
     .iphoneBlackSide
       width: calc(100%/67*63)
@@ -393,7 +504,9 @@ body
       .title
         margin-left: 15px
         width: 90%
+        height: 20px
         display: flex
+        margin-top: 10px
         align-items: center
         justify-content: space-between
         p
@@ -408,7 +521,7 @@ body
           color: white
           font-size: 16px
           text-align: center
-          line-height: 30px
+          line-height: 25px
           background-color: #5f4e4e
           cursor: pointer
           p
@@ -505,7 +618,7 @@ body
     width: 320px
     height: 630px
     border-radius: 50px
-    background-color: #e8cece
+    background-color: white
     transform: rotateY(180deg) translateZ(10px)
     .backButton
       width: 100%
@@ -514,7 +627,7 @@ body
         width: calc(100%/63*59)
         height: calc(100%/130*126)
         border-radius: 35px
-        background-color: #f5f5f5
+        background-color: white
         +center
         .backLens
           position: relative
@@ -570,7 +683,7 @@ body
     left: 233px
     width: 20px
     height: calc(630px/134*120)
-    background-color: #e8cece
+    background-color: white
     transform-style: preserve-3d
     transform: rotateY(-90deg)
     &::after
@@ -579,7 +692,7 @@ body
       position: absolute
       width: 100% 
       height: calc(100%/134*10)
-      background-color: #e8cece
+      background-color: white
       top: -20px
       transform: rotateX(45deg) translateZ(-2px) translateY(-15px)
     &::before
@@ -588,7 +701,7 @@ body
       position: absolute
       width: 100% 
       height: calc(100%/134*12)
-      background-color: #e8cece
+      background-color: white
       top: 563px
       transform: rotateX(-45deg) translateZ(-19px) translateY(2px)
     .mute1
@@ -597,7 +710,7 @@ body
       height: 4%
       top: 10.8%
       left: 35%
-      background-color: #e8cece
+      background-color: white
       border-radius: 5px
       border: solid .3px
       box-shadow: 0 0 2px 
@@ -618,7 +731,7 @@ body
       height: 50px
       border-radius: 50px
       box-shadow: 0px 0px 4px #494949 
-      background-color: #e8cece
+      background-color: white
       transform-style: preserve-3d 
       transform: translateZ(8px)
       p
@@ -640,7 +753,7 @@ body
       height: 50px
       border-radius: 50px
       box-shadow: 0px 0px 4px #494949 
-      background-color: #e8cece
+      background-color: white
       transform: translateZ(8px)
       transform-style: preserve-3d 
       p
@@ -660,7 +773,7 @@ body
     left: 547px
     width: 20px
     height: calc(630px/134*120)
-    background-color: #e8cece
+    background-color: white
     transform-style: preserve-3d
     transform: rotateY(90deg)
     &::after
@@ -669,7 +782,7 @@ body
       position: absolute
       width: 100% 
       height: calc(100%/134*10)
-      background-color: #e8cece
+      background-color: white
       top: -20px
       transform: rotateX(45deg) translateZ(0px) translateY(-20px)
     &::before
@@ -678,7 +791,7 @@ body
       position: absolute
       width: 100% 
       height: calc(100%/134*10)
-      background-color: #e8cece
+      background-color: white
       top: 563px
       transform: rotateX(-45deg) translateZ(-15px) translateY(8px)
     .text
@@ -688,7 +801,7 @@ body
       height: 80px
       border-radius: 50px
       box-shadow: 0px 0px 4px #494949 
-      background-color: #e8cece
+      background-color: white
       transform: translateZ(8px)
       transform-style: preserve-3d 
       p
@@ -717,7 +830,7 @@ body
       position: absolute
       width: 100% 
       height: calc(100%/134*5)
-      background-color: #e8cece
+      background-color: white
       top: 180px
       transform: rotateX(30deg) translateZ(-7px) translateY(6.5px)
     &::before
@@ -726,6 +839,6 @@ body
       position: absolute
       width: 100% 
       height: calc(100%/134*5)
-      background-color: #e8cece
+      background-color: white
       top: 440px
       transform: rotateX(-30deg) translateZ(-3px) translateY(.5px)
